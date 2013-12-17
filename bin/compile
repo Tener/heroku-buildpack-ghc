@@ -157,6 +157,7 @@ echo "-----> Getting newest list of cabal packages"
 cabal update
 
 echo "-----> Installing user application"
+. hooks/build.sh
 cabal install -j --disable-library-profiling --disable-executable-profiling --disable-shared
 
 echo "-----> Caching latest cabal sandbox"
